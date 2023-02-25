@@ -1,0 +1,6 @@
+#ifndef ALGORITHMS_GLOBAL_H
+#define ALGORITHMS_GLOBAL_H
+
+
+
+#endif // ALGORITHMS_GLOBAL_H
