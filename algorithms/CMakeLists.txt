@@ -9,14 +9,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
 add_executable(algorithms
   coinsplit.cpp
+  gridtraveller.cpp
 
 )
 
-target_link_libraries(algorithms PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
-target_compile_definitions(algorithms PRIVATE ALGORITHMS_LIBRARY)

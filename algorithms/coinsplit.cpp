@@ -31,21 +31,21 @@ optional<vector<int>> bestCoins(int amt, const vector<int>& coins,map<int,vector
 
 
 }
-int main(){
-    auto printer= [](auto vec){
-        cout <<"{";
-        for(auto v: vec){
-            cout<<v<<",";
-        }
-        cout <<"}\n";
+//int main(){
+//    auto printer= [](auto vec){
+//        cout <<"{";
+//        for(auto v: vec){
+//            cout<<v<<",";
+//        }
+//        cout <<"}\n";
 
-    };
-    auto findDenominations=[](int amt,const  vector<int>& coins){
-        map<int,vector<int>> bestCache;
-        return bestCoins(amt,coins,bestCache).value_or(vector<int>());
-    };
-    printer(findDenominations(50,{50,21,1}));
-    printer(findDenominations(50,{21,1}));
-    printer(findDenominations(50,{21,2,1}));
-    printer(findDenominations(50,{21}));
-}
+//    };
+//    auto findDenominations=[](int amt,const  vector<int>& coins){
+//        map<int,vector<int>> bestCache;
+//        return bestCoins(amt,coins,bestCache).value_or(vector<int>());
+//    };
+//    printer(findDenominations(50,{50,21,1}));
+//    printer(findDenominations(50,{21,1}));
+//    printer(findDenominations(50,{21,2,1}));
+//    printer(findDenominations(50,{21}));
+//}
