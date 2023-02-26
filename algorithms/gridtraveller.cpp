@@ -15,21 +15,21 @@ long long travelCount(int row, int column,map<pair<int,int>,long long>& cache){
 
 }
 
-int main(){
+//int main(){
 
-    auto print=[](auto a, auto b){
-        cout<<"travelCount("<<a<<","<<b<<") =";
-        map<pair<int,int>,long long> cache;
-        cout<<travelCount(a,b,cache)<<"\n";
+//    auto print=[](auto a, auto b){
+//        cout<<"travelCount("<<a<<","<<b<<") =";
+//        map<pair<int,int>,long long> cache;
+//        cout<<travelCount(a,b,cache)<<"\n";
 
-    };
+//    };
 
-    print(0,0);
-    print(0,1);
-    print(1,0);
-    print(1,1);
-    print(2,2);
-    print(2,3);
-    print(5,6);
-    print(18,18);
-}
+//    print(0,0);
+//    print(0,1);
+//    print(1,0);
+//    print(1,1);
+//    print(2,2);
+//    print(2,3);
+//    print(5,6);
+//    print(18,18);
+//}

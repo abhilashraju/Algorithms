@@ -13,6 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(algorithms
   coinsplit.cpp
   gridtraveller.cpp
+  targetstring.cpp
 
 )
 
