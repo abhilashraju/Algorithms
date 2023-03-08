@@ -9,45 +9,32 @@ using namespace std;
 class Solution {
 public:
 
-pair<int,int> longestFrom(string_view vw){
-   vector<pair<char,int>> stack;
-   int patternindex=0;
-   int validsum=0;
-   int runningsum=0;
-   bool validpattern=true;
-   for(int i=0;i<vw.length() && validpattern;i++){
+int longestFrom(string_view vw){
+   vector<int> stack;
+   stack.push_back(-1);
+   int max=0;
+   for(int i=0;i<vw.length() ;i++){
        auto c=vw[i];
        switch(c){
        case '(':
-           if(stack.empty()){
-                patternindex=i;
-                validsum +=runningsum;
-                runningsum=0;
-           }
-           stack.push_back({c,i});
+
+           stack.push_back(i);
            break;
 
        case ')':
+           stack.pop_back();
            if(stack.empty()){
-               validpattern=false;
-           }else{
-               stack.pop_back();
-               runningsum++;
+               stack.push_back(i);
+           }
+           auto currentlen=i-stack.back();
+           if(currentlen>max){
+               max=currentlen;
            }
            break;
        }
    }
-   if(stack.empty()){
-       validsum+=runningsum;
-       return {validsum,patternindex+1};
-   }
-   auto iter=adjacent_find(begin(stack),end(stack),[](auto& a,auto& b){
-       return b.second-a.second > 1;
-   });
-   if(iter ==end(stack)){
-       return {validsum,(iter-1)->second+1};
-   }
-   return {validsum,iter->second+1};
+
+   return max;
 
 
 
@@ -56,17 +43,7 @@ int longestValidParentheses(string s) {
     int max=0;
     string_view vw=s;
     if(s.empty()) return 0;
-    auto iter = find(begin(vw),end(vw),'(');
-    int seqencestart=distance(begin(vw),iter);
-    while(seqencestart < vw.length()){
-        auto [len,lastpatternindex] = longestFrom(vw.substr(seqencestart));
-        if(len>max){
-            max=len;
-        }
-        iter=find(begin(vw)+lastpatternindex+seqencestart,end(vw),'(');
-        seqencestart=distance(begin(vw),iter);
-    }
-    return max*2;
+    return longestFrom(s);
 }
 };
 
