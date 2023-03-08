@@ -50,7 +50,7 @@ vector<vector<string>> allConstruct(std::string_view target, const vector<string
     }
     return cache[target]=patterns;
 }
-
+#if(0)
 int main(){
     auto print=[](auto a, auto b,auto func){
         cout<< a << " from {";
@@ -109,3 +109,4 @@ int main(){
     print("abcadefg",makeKeys("a","bc","fg","de"),allConstructPrinter);
     print("",makeKeys("a","bc","fg"),allConstructPrinter);
 }
+#endif

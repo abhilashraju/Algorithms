@@ -14,7 +14,21 @@ add_executable(algorithms
   coinsplit.cpp
   gridtraveller.cpp
   targetstring.cpp
+  matrices.cpp
+  SpiralSumVector.cpp
+  SortedMedian.cpp
+  longestpalindrome.cpp
+  longestplaindromiterative.cpp
+  zigzagstring.cpp
+  smallestpositive.cpp
+  Trapping_Rain_Water.cpp
+  Reverse_Nodes_in_k_Group.cpp
+  Merge_k_Sorted_Lists.cpp
+  Substring_with_Concatenation_of_All_Words.cpp
+  Longest_Valid_Parentheses.cpp
 
 )
+
+
 
 
