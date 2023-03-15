@@ -26,6 +26,10 @@ add_executable(algorithms
   Merge_k_Sorted_Lists.cpp
   Substring_with_Concatenation_of_All_Words.cpp
   Longest_Valid_Parentheses.cpp
+  Sudoku_Solver.cpp
+  Binary_Tree_Maximum_Path_Sum.cpp
+  Wildcard_Matching.cpp
+  Wildcard_Matching_hash.cpp
 
 )
 
