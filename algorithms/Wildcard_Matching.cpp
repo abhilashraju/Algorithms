@@ -103,7 +103,7 @@ public:
           return isMatchDP(s,p,0,0,cache);
       }
 };
-
+#if 0
 int main()
 {
     auto print=[](auto s,auto p){
@@ -145,3 +145,4 @@ int main()
 
 
 }
+#endif

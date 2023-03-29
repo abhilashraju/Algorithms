@@ -30,6 +30,7 @@ add_executable(algorithms
   Binary_Tree_Maximum_Path_Sum.cpp
   Wildcard_Matching.cpp
   Wildcard_Matching_hash.cpp
+  N-Queens.cpp
 
 )
 
