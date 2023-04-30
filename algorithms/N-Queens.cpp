@@ -186,7 +186,7 @@ public:
         return all;
     }
 };
-
+#if 0
 int main(){
 
     auto print=[](int n){
@@ -221,3 +221,4 @@ int main(){
                                             {"....Q","..Q..","Q....","...Q.",".Q..."}});
     print(6);
 }
+#endif

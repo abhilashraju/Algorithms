@@ -26,7 +26,8 @@ public:
                forward=true;
            }
        }
-       return std::accumulate(begin(rowstrings),end(rowstrings),string(),[](auto& s, auto& v){
+       
+       return std::accumulate(begin(rowstrings),end(rowstrings),string(),[](auto s, auto& v){
           return s+v;
        });
     }
